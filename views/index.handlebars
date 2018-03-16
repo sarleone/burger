@@ -3,23 +3,23 @@
 
 {{!-- <h2>Burgers that are not Devoured!</h2> --}}
 <h3>EAT THAT BURGER</h3>
-<ul class="notEaten">
+<ol class="notEaten">
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
-</ul>
+</ol>
 
 {{!-- <h2>Burgers that are devoured!</h2> --}}
 
-<ul class="eaten">
+<ol class="eaten">
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
-</ul>
+</ol>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

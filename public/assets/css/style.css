@@ -1,3 +1,6 @@
+body {
+  background-color: gold;
+}
 h1 {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -28,24 +31,25 @@ h4 {
 li {
   padding: 5px;
   margin: 5px;
-  background: aqua;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .eaten {
   float: right;
   width: 40%;
+  background: grey;
 }
 
 .notEaten {
   float:left;
   width:40%;
+  background: green;
 }
 
 .create-update-form {
   padding: 5px;
   margin: 25px;
-  background: aqua;
+  background: green;
 
 }
 
