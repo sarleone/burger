@@ -1,19 +1,66 @@
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 50px, 50px, 0px, 50px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left;
+  margin-left: 15%;
+}
+
+h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: aqua;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.label {
-  font-weight: bold;
+.eaten {
+  float: right;
+  width: 40%;
+}
+
+.notEaten {
+  float:left;
+  width:40%;
 }
 
 .create-update-form {
   padding: 5px;
-  margin: 5px;
+  margin: 25px;
   background: aqua;
+
 }
 
 .form-group {
   margin-bottom: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.addB {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
