@@ -1,35 +1,47 @@
-<h1>Burger Believe It!!!</h1>
-<img src="https://cdn.dribbble.com/users/831863/screenshots/2724451/dribbbble2_1x.png">
-
-{{!-- <h2>Burgers that are not Devoured!</h2> --}}
-<h3>EAT THAT BURGER</h3>
-<ol class="notEaten">
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ol>
-
-{{!-- <h2>Burgers that are devoured!</h2> --}}
-
-<ol class="eaten">
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ol>
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center" id="top-bar">
+      <img src="https://cdn.dribbble.com/users/831863/screenshots/2724451/dribbbble2_1x.png" alt="burger"/>
+      <h1>Burger Believe It!!!</h1>
+    </div>
+    <div class="col-xs-6 text-center" class="task">
+      <div class="row">
+        {{#each burger_data}}
+          {{#unless this.devoured}}
+          <div class="col-xs-9 text-left">
+            <pre>
+              {{this.id}}. {{this.burger_name}}
+            </pre>
+          </div>
+          <div class="col-xs-3 text-center">
+            <form class="devour-form button-size">
+              <input input type="hidden" class="burger_id" type="text" value={{this.id}}><br>
+              <button type="submit" class="btn btn-default">Devour it!</button>
+            </form>
+          </div>
+          {{/unless}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="col-xs-6 text-center" class="task">
+      {{#each burger_data}}
+        {{#if this.devoured}}
+          <input class="form-control" type="text" placeholder="{{this.id}}. {{this.burger_name}}" readonly>
+        {{/if}}
+      {{/each}}
+    </div>
   </div>
+</div>
 
-  <button class= "addB" type="submit">Add Burger</button>
-</form>
-<h4>Enter a burger you want to eat and Click the "Submit" button</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center enter_section">
+      <form action="/burgers/create" method="POST">
+        <input type="text" class="form-control" name="burger_name" value="" id="enter_text">
+        <button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
+      </form>
+      <p>Enter your dream burger and click the <strong>Submit</strong> button.</p>
+    </div>
+  </div>
+</div>
+
